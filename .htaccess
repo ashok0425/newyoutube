@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^(.*)$ public/$1 [L]
+RewriteCond %{HTTP_HOST} ^financialkhabar\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.financialkhabar\.com$
+RewriteRule ^/?$ "https\:\/\/financialkhabar\.com\/public" [R=301,L]
